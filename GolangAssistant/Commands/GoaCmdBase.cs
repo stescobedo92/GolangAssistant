@@ -18,11 +18,6 @@ namespace GolangAssistant.Commands
         protected IHttpClientFactory _httpClientFactory;
         protected IConsole _console;
 
-        [Option(CommandOptionType.SingleValue, ShortName = "i", LongName = "info", Description = "information about project", ShowInHelpText = true)]
-        public string Information { get; set; }
-
-        protected string FileNameSuffix { get; set; }
-
         protected virtual Task<int> OnExecute(CommandLineApplication app)
         {
             return Task.FromResult(0);

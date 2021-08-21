@@ -24,7 +24,6 @@ namespace GolangAssistant.Commands
 
         protected override async Task<int> OnExecute(CommandLineApplication app)
         {
-            Console.WriteLine("ADLHJDHJASD:  " + Name);
             try
             {
                 if (string.IsNullOrEmpty(Name))

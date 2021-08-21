@@ -9,8 +9,8 @@ using Microsoft.Extensions.Logging;
 namespace GolangAssistant.Commands
 {
     [Command(Name = "goa", OptionsComparison = StringComparison.InvariantCultureIgnoreCase)]
-    //[VersionOptionFromMember("--version", MemberName = nameof(GetVersion))]
-    [Subcommand(typeof(ConsoleCmd))]
+    [VersionOptionFromMember("--version", MemberName = nameof(GetVersion))]
+    [Subcommand(typeof(ConsoleCmd)), Subcommand(typeof(MvcCmd))]
     class GoaCmd : GoaCmdBase
     {
         private readonly ILogger<GoaCmd> _logger;
